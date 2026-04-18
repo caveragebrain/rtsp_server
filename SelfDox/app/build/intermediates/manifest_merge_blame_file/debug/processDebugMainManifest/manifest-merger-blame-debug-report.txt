@@ -1,0 +1,215 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.selfdox.rtspserver"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="31"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- DECISION: All permissions per D10 spec -->
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:6:5-65
+12-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:6:22-62
+13    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+13-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:7:5-71
+13-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:7:22-68
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:8:5-67
+14-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:8:22-64
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:9:5-77
+15-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:9:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+16-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:10:5-84
+16-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:10:22-81
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+17-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:11:5-88
+17-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:11:22-85
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:12:5-68
+18-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:12:22-65
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:13:5-76
+19-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:13:22-73
+20    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+20-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:14:5-76
+20-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:14:22-73
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:15:5-79
+21-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:15:22-76
+22    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+22-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:16:5-77
+22-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:16:22-74
+23
+24    <!-- Hardware features -->
+25    <uses-feature
+25-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:19:5-84
+26        android:name="android.hardware.camera"
+26-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:19:19-57
+27        android:required="true" />
+27-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:19:58-81
+28    <uses-feature
+28-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:20:5-95
+29        android:name="android.hardware.camera.autofocus"
+29-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:20:19-67
+30        android:required="false" />
+30-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:20:68-92
+31    <uses-feature
+31-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:21:5-88
+32        android:name="android.hardware.microphone"
+32-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:21:19-61
+33        android:required="true" />
+33-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:21:62-85
+34    <uses-feature
+34-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:22:5-82
+35        android:name="android.hardware.wifi"
+35-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:22:19-55
+36        android:required="true" />
+36-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:22:56-79
+37
+38    <permission
+38-->[androidx.core:core:1.13.1] /home/windows7/.gradle/caches/8.9/transforms/5da203d315242310a533081dea67a033/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+39        android:name="com.selfdox.rtspserver.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+39-->[androidx.core:core:1.13.1] /home/windows7/.gradle/caches/8.9/transforms/5da203d315242310a533081dea67a033/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+40        android:protectionLevel="signature" />
+40-->[androidx.core:core:1.13.1] /home/windows7/.gradle/caches/8.9/transforms/5da203d315242310a533081dea67a033/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+41
+42    <uses-permission android:name="com.selfdox.rtspserver.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+42-->[androidx.core:core:1.13.1] /home/windows7/.gradle/caches/8.9/transforms/5da203d315242310a533081dea67a033/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+42-->[androidx.core:core:1.13.1] /home/windows7/.gradle/caches/8.9/transforms/5da203d315242310a533081dea67a033/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+43
+44    <application
+44-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:24:5-51:19
+45        android:name="com.selfdox.rtspserver.SelfDoxApp"
+45-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:25:9-35
+46        android:allowBackup="true"
+46-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:26:9-35
+47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+47-->[androidx.core:core:1.13.1] /home/windows7/.gradle/caches/8.9/transforms/5da203d315242310a533081dea67a033/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+48        android:debuggable="true"
+49        android:extractNativeLibs="false"
+50        android:icon="@mipmap/ic_launcher"
+50-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:27:9-43
+51        android:label="@string/app_name"
+51-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:28:9-41
+52        android:roundIcon="@mipmap/ic_launcher_round"
+52-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:29:9-54
+53        android:supportsRtl="true"
+53-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:30:9-35
+54        android:theme="@style/Theme.SelfDox" >
+54-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:31:9-45
+55        <activity
+55-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:34:9-43:20
+56            android:name="com.selfdox.rtspserver.MainActivity"
+56-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:35:13-41
+57            android:exported="true"
+57-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:36:13-36
+58            android:label="@string/app_name"
+58-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:37:13-45
+59            android:theme="@style/Theme.SelfDox" >
+59-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:38:13-49
+60            <intent-filter>
+60-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:39:13-42:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:40:17-69
+61-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:40:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:41:17-77
+63-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:41:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <!-- DECISION: foregroundServiceType with camera|microphone per D3 spec (Android 12 requirement) -->
+68        <service
+68-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:46:9-49:40
+69            android:name="com.selfdox.rtspserver.service.StreamService"
+69-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:47:13-50
+70            android:exported="false"
+70-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:49:13-37
+71            android:foregroundServiceType="camera|microphone" />
+71-->/home/windows7/Documents/github/last.bak/SelfDox/app/src/main/AndroidManifest.xml:48:13-62
+72
+73        <activity
+73-->[androidx.compose.ui:ui-tooling-android:1.6.5] /home/windows7/.gradle/caches/8.9/transforms/640635ab71ae27891a2aa6fe66d7507c/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+74            android:name="androidx.compose.ui.tooling.PreviewActivity"
+74-->[androidx.compose.ui:ui-tooling-android:1.6.5] /home/windows7/.gradle/caches/8.9/transforms/640635ab71ae27891a2aa6fe66d7507c/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+75            android:exported="true" />
+75-->[androidx.compose.ui:ui-tooling-android:1.6.5] /home/windows7/.gradle/caches/8.9/transforms/640635ab71ae27891a2aa6fe66d7507c/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+76        <activity
+76-->[androidx.compose.ui:ui-test-manifest:1.6.5] /home/windows7/.gradle/caches/8.9/transforms/357aa7e8c03391d914101c7f057e494a/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:23:9-25:39
+77            android:name="androidx.activity.ComponentActivity"
+77-->[androidx.compose.ui:ui-test-manifest:1.6.5] /home/windows7/.gradle/caches/8.9/transforms/357aa7e8c03391d914101c7f057e494a/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:24:13-63
+78            android:exported="true" />
+78-->[androidx.compose.ui:ui-test-manifest:1.6.5] /home/windows7/.gradle/caches/8.9/transforms/357aa7e8c03391d914101c7f057e494a/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:25:13-36
+79
+80        <provider
+80-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+81            android:name="androidx.startup.InitializationProvider"
+81-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+82            android:authorities="com.selfdox.rtspserver.androidx-startup"
+82-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+83            android:exported="false" >
+83-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+84            <meta-data
+84-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+85-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+86                android:value="androidx.startup" />
+86-->[androidx.emoji2:emoji2:1.3.0] /home/windows7/.gradle/caches/8.9/transforms/3cc373ca6e2779cdcf885c718847b2fc/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.lifecycle:lifecycle-process:2.8.0] /home/windows7/.gradle/caches/8.9/transforms/599feba55f73c9e995ff731417dd597f/transformed/lifecycle-process-2.8.0/AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+88-->[androidx.lifecycle:lifecycle-process:2.8.0] /home/windows7/.gradle/caches/8.9/transforms/599feba55f73c9e995ff731417dd597f/transformed/lifecycle-process-2.8.0/AndroidManifest.xml:30:17-78
+89                android:value="androidx.startup" />
+89-->[androidx.lifecycle:lifecycle-process:2.8.0] /home/windows7/.gradle/caches/8.9/transforms/599feba55f73c9e995ff731417dd597f/transformed/lifecycle-process-2.8.0/AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+92                android:value="androidx.startup" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+93        </provider>
+94
+95        <receiver
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+96            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+97            android:directBootAware="false"
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+98            android:enabled="true"
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+99            android:exported="true"
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+100            android:permission="android.permission.DUMP" >
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+102                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+105                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+108                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+111                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/windows7/.gradle/caches/8.9/transforms/3d8dec5b3dddb4ab7012841293c0d935/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+112            </intent-filter>
+113        </receiver>
+114    </application>
+115
+116</manifest>
